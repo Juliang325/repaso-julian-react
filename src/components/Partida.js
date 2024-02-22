@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 
 export const Partida = () => {
     const [nJugadores, setJugadores] = useState(2)
+    const [mostrar, setMostrar] = useState(false)
+    const jugar = () => {
+        setMostrar(!mostrar);
+    }
     return (
         <div>
             <div class="mb-3">
@@ -21,7 +25,10 @@ export const Partida = () => {
             <input
                 type="button"
                 value="Jugar"
+                onClick={jugar}
             />
+            {/* mostrar hola si mostrar es true */}
+            {mostrar && <p>hola</p>}
         </div>
     )
 }
