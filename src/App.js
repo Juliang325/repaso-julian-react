@@ -5,6 +5,7 @@ import { Ejercicio3 } from './components/Ejercicio3';
 import { Ejercicio4 } from './components/Ejercicio4';
 import { Ejercicio5 } from './components/Ejercicio5';
 import { Partida } from './components/Partida';
+import { Pruebecita } from './components/Pruebecita';
 
 function App() {
   return (
@@ -16,8 +17,11 @@ function App() {
         <hr/>
         <Ejercicio3/> 
         <Ejercicio4/>
-        <Ejercicio5/>*/}
-        <Partida/>
+        <Ejercicio5/>
+        <Partida/>*/}
+        <Pruebecita></Pruebecita>
+        
+
         
         
       </header>
