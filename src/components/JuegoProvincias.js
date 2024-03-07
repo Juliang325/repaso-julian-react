@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react'
 
 export default function JuegoProvincias() {
 
-    const [provincias, setProvincias] = useState(['Sevilla', 'Cadiz', 'Huelva']);
     const [respuesta, setRespuesta] = useState('');
     const [numAle, setNumAle] = useState(0);
     const [numAciertos, setNumAciertos] = useState(0);
     const [numErrores, setNumErrores] = useState(0);
+
+    const provincias = ['Sevilla', 'Cadiz', 'Huelva']
 
     const localidades = [
         {'ciudad' : 'Sevilla','nombre' : 'Mairena'},
@@ -18,11 +19,6 @@ export default function JuegoProvincias() {
         {'ciudad' : 'Huelva','nombre' : 'Mazagon'},
     ]
 
-    useEffect(() => {
-
-    }, [numAle])
-
-
     const sortear = () => {
         const numAleatorio = Math.round(Math.random() * (localidades.length - 1));
         setNumAle(numAleatorio);
@@ -32,8 +28,13 @@ export default function JuegoProvincias() {
     function responder  ()  {
         if ( respuesta === localidades[numAle].ciudad){
             console.log('Has acertado');
+            let numAciertosRef = numAciertos + 1;
+            setNumAciertos(numAciertosRef);
+            
         }else{
-            console.log('No has acerdado')
+            console.log('No has acerdado');
+            let numErroresRef = numErrores + 1;
+            setNumErrores(numErroresRef);
         }
         setNumAle(numAle);
         console.log(numAle);

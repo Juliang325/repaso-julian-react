@@ -1,4 +1,5 @@
 import './App.css';
+import AñadirTabla from './components/AñadirTabla';
 import { Counter } from './components/Counter';
 import { Cronometro } from './components/Cronometro';
 import { Ejercicio1 } from './components/Ejercicio1';
@@ -6,6 +7,7 @@ import { Ejercicio2 } from './components/Ejercicio2';
 import { Ejercicio3 } from './components/Ejercicio3';
 import { Ejercicio4 } from './components/Ejercicio4';
 import { Ejercicio5 } from './components/Ejercicio5';
+import Ejercicio6 from './components/Ejercicio6';
 import { EjercicioListas } from './components/EjercicioListas';
 import JuegoProvincias from './components/JuegoProvincias';
 import { Partida } from './components/Partida';
@@ -29,9 +31,13 @@ function App() {
         <EjercicioListas/>
         <Reloj></Reloj>
         <Cronometro></Cronometro>
-        */}
-        
         <JuegoProvincias></JuegoProvincias>
+        <AñadirTabla/>
+        */}
+        <Ejercicio6/>
+        
+        
+
         
         
       </header>
